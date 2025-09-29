@@ -1,10 +1,9 @@
-import java.security.Key;
 import java.util.Scanner;
 public class Main{
     public static void main (String[] Args){
-        int decisionJuego = 0;
+        int decisionJuego;
         Scanner userInputVar = new Scanner(System.in);
-        String nombre = "";
+        String nombre;
         System.out.println("Eres una araña, introduce tu nombre: ");
         nombre = userInputVar.nextLine();
         userInputVar.nextLine(); //Limpiar el buffer
