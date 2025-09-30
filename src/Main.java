@@ -1,5 +1,12 @@
 import java.util.Scanner;
 public class Main{
+    public static int depurarInput(int numInput, Scanner gameInput, int minValue, int maxValue){
+        while(!(minValue <= numInput && numInput <= maxValue)){
+            System.out.println("Por favor escribe un valor válido:");
+            numInput = gameInput.nextInt();
+        }
+        return(numInput);
+    }
     public static void main (String[] Args){
         int decisionJuego;
         Scanner userInputVar = new Scanner(System.in);
@@ -11,6 +18,7 @@ public class Main{
         System.out.println("1: Bajas a explorar la clase");
         System.out.println("2: Subes tu tela para explorar el techo");
         decisionJuego = userInputVar.nextInt();
+        Main.depurarInput(decisionJuego, userInputVar, 1, 2);
         if(decisionJuego == 1){
             System.out.println("Cuidadosamente bajas al suelo de la clase. Una vez llegas al suelo ves el mundo desde " +
                     "una nueva perspectiva, ¿qué haces?");
@@ -18,6 +26,7 @@ public class Main{
             System.out.println("2: Ir a la mochila de un estudiante");
             System.out.println("3: Subir a la mesa del escritorio y esconderte en la chaqueta");
             decisionJuego = userInputVar.nextInt();
+            Main.depurarInput(decisionJuego, userInputVar, 1, 3);
             if(decisionJuego == 1){
                 //bajar -- cañería
                 System.out.println("Sin llamar la antención te subes a la ventana y observas que está abierta. " +
@@ -25,6 +34,7 @@ public class Main{
                 System.out.println("1: Bajar a fuera");
                 System.out.println("2: Subir la cañería");
                 decisionJuego = userInputVar.nextInt();
+                Main.depurarInput(decisionJuego, userInputVar, 1, 2);
                 if(decisionJuego == 1){
                     //muerte por balón
                     System.out.println("Disfrutas tu exploración del mundo exterior durante unos días, " +
@@ -51,6 +61,7 @@ public class Main{
                 System.out.println("1: Decides bajar al suelo a explorar la clase");
                 System.out.println("2: Mejor esconderse, sube el muro al techo");
                 decisionJuego = userInputVar.nextInt();
+                Main.depurarInput(decisionJuego, userInputVar, 1, 2);
                 if(decisionJuego == 1){
                     System.out.println("Asustas a un estudiante en el proceso y te aplasta");
                     System.out.println("TRUE ENDING");
@@ -69,6 +80,7 @@ public class Main{
             System.out.println("1: Vas a la derecha a explorar la oscuridad");
             System.out.println("2: Explorars en la dirección del ruído");
             decisionJuego = userInputVar.nextInt();
+            Main.depurarInput(decisionJuego, userInputVar, 1, 2);
             if(decisionJuego == 1){
                 //Rebelión de arañas
                 System.out.println("Te encuentras con un ejército de arañas esperándote. Una identificada con " +
@@ -86,6 +98,7 @@ public class Main{
                 System.out.println("1: Bajas a la nueva clase");
                 System.out.println("2: Te diriges hacia el sonido");
                 decisionJuego = userInputVar.nextInt();
+                Main.depurarInput(decisionJuego, userInputVar, 1, 2);
                 if(decisionJuego == 1){
                     System.out.println("Bajas cuidadosamente del techo y asustas a un estudiante, " +
                             "eres rápidamente aplastado por un zapato.");
