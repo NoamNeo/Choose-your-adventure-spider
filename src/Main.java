@@ -88,7 +88,7 @@ public class Main{
             System.out.println("Subes cuidadosamente y te encuentras en el techo, a la izquierda hay un " +
                     "pasillo oscuro y a la izquierda escuchas un ruído");
             System.out.println("1: Vas a la derecha a explorar la oscuridad");
-            System.out.println("2: Explorars en la dirección del ruído");
+            System.out.println("2: Exploras en la dirección del ruído");
             decisionJuego = Main.depurarInput(userInputVar, 1, 2);
             decionesTomadas ++;
             if(decisionJuego == 1){
