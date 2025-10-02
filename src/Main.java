@@ -47,22 +47,22 @@ public class Main{
                     System.out.println("Disfrutas tu exploración del mundo exterior durante unos días, " +
                             "encontrando comida y refugiándote hasta que un día eres aplastado por un balón");
                     System.out.println("BAD ENDING");
-                    System.exit(0);
-                }else{
+                    decisionJuego = 1000;
+                }else if (decisionJuego == 2){
                     //lugar magnífico para crear un nido y ser feliz
                     System.out.println("Te cuesta escalar la cañería hasta que encuentras un rincón en el tejado " +
                             "que conviertes en una alcoba y tu nido");
                     System.out.println("HAPPY ENDING");
                     happyEnding = true;
-                    System.exit(0);
+                    decisionJuego = 1000;
                 }
             }else if(decisionJuego == 2){
                 //Aplastado bad ending
                 System.out.println("Disfrutas de las comodidades de una mochila hasta que eres aplastado " +
                         "por un ordenador");
                 System.out.println("BAD ENDING");
-                System.exit(0);
-            }else{
+                decisionJuego = 1000;
+            }else if (decisionJuego == 3){
                 //Chaqueta
                 System.out.println("Te encuentras dentro de una maravillosa chaqueta, te sientes intocable");
                 System.out.println("Te tomas una pequeña siesta y cuando despiertas te encuentras en una nueva clase");
@@ -74,16 +74,16 @@ public class Main{
                     System.out.println("Asustas a un estudiante en el proceso y te aplasta");
                     System.out.println("TRUE ENDING");
                     trueEnding = true;
-                    System.exit(0);
-                }else{
+                    decisionJuego = 1000;
+                }else if (decisionJuego == 2){
                     System.out.println("Intentas subir sin llamar la antención, pero rápidamente se escucha un " +
                             "grito y eres aplastado por un libro");
                     System.out.println("TRUE ENDING");
                     trueEnding = true;
-                    System.exit(0);
+                    decisionJuego = 1000;
                 }
             }
-        }else{
+        }else  if (decisionJuego == 2){
             //Seguir ruído -- tela
             System.out.println("Subes cuidadosamente y te encuentras en el techo, a la izquierda hay un " +
                     "pasillo oscuro y a la izquierda escuchas un ruído");
@@ -100,8 +100,8 @@ public class Main{
                         "especie dominante en la Tierra.");
                 System.out.println("DOMINACIÓN GLOBAL");
                 globalDomination = true;
-                System.exit(0);
-            }else{
+                decisionJuego = 1000;
+            }else  if (decisionJuego == 2){
                 //Bajar a una nueva clase -- Girar a la izquierda
                 System.out.println("Te adentras más hacia el pasillo oscuro.");
                 System.out.println("Hay una bifurcación en el pasillo, a la derecha bajas a una nueva clase " +
@@ -115,7 +115,7 @@ public class Main{
                             "eres rápidamente aplastado por un zapato.");
                     System.out.println("BAD ENDING COVARDE");
                     cowardEnding = true;
-                }else{
+                }else if (decisionJuego == 2){
                     System.out.println("De repente te encuentras en Hallownest y un bicho con un clavo te mata");
                     System.out.println("CROSSOVER ENDING");
                     crossoverEnding = true;
